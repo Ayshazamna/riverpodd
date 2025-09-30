@@ -48,8 +48,7 @@ class CurvedNavigationBar extends ConsumerWidget {
                     height: 80,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        // Animated Icon Container
+                      children: [ 
                         AnimatedContainer(
                           duration: const Duration(milliseconds: 300),
                           height: isSelected ? 50 : 40,
@@ -72,7 +71,7 @@ class CurvedNavigationBar extends ConsumerWidget {
                           ),
                         ),
                         const SizedBox(height: 4),
-                        // Label
+                  
                         Text(
                           item.label,
                           style: TextStyle(
