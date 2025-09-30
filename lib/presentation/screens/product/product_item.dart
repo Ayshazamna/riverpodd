@@ -1,80 +1,3 @@
-// import 'package:cached_network_image/cached_network_image.dart';
-// import 'package:flutter/material.dart';
-// import '../model/product.dart';
-// import 'details screen.dart';
-//
-// class ProductItem extends StatelessWidget {
-//   final Productt product;
-//
-//   const ProductItem({super.key, required this.product});
-//
-//
-//   String get fullImageUrl => 'https://api.hanzprellet.com/storage/${product.image}';
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     print('fullImageUrl');
-//     print(fullImageUrl);
-//     print(product.image.toString());
-//     return InkWell(
-//       onTap: () {
-//         Navigator.push(
-//           context,
-//           MaterialPageRoute(
-//             builder: (context) => ProductDetailsScreen(product: product),
-//           ),
-//         );
-//       },
-//
-//       child: Card(
-//         child: Column(
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: [
-//             // Image with fixed height
-//             SizedBox(
-//               height: 120,
-//               child: CachedNetworkImage(
-//                 imageUrl: fullImageUrl,
-//                 fit: BoxFit.cover,
-//                 placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
-//                 errorWidget: (context, url, error) => const Center(child: Icon(Icons.image_not_supported)),
-//               ),
-//             ),
-//
-//
-//             Padding(
-//               padding: const EdgeInsets.all(8.0),
-//               child: Row(
-//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                 children: [
-//                   // Product Name
-//                   Expanded(
-//                     child: Text(
-//                       product.name ?? 'No Name',
-//                       style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-//                       maxLines: 1,
-//                       overflow: TextOverflow.ellipsis,
-//                     ),
-//                   ),
-//
-//                   Text(
-//                     '\$${product.price ?? 0}',
-//                     style: const TextStyle(
-//                       fontSize: 16,
-//                       fontWeight: FontWeight.bold,
-//                       color: Colors.green,
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -111,7 +34,7 @@ class ProductItem extends StatelessWidget {
       }
     }
 
-    // Return empty string if no image found (will show error widget)
+    // Return empty string if no image found 
     return '';
   }
 
@@ -139,8 +62,7 @@ class ProductItem extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Image with fixed height
+          children: 
             ClipRRect(
               borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
               child: SizedBox(
@@ -230,7 +152,7 @@ class ProductItem extends StatelessWidget {
                                   color: Colors.grey,
                                   width: 1,
                                 ),
-                                // You can parse color from optionValue if needed
+                            
                                 color: Colors.primaries[
                                 index % Colors.primaries.length
                                 ],
